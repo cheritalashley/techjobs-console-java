@@ -37,11 +37,13 @@ public class JobData {
 
         for (HashMap<String, String> row : allJobs) {
             String aValue = row.get(field);
-
             if (!values.contains(aValue)) {
                 values.add(aValue);
             }
         }
+       /* for (int i = 0; i < allJobs.size(); i++) {
+            System.out.println("I put this in: FindAll w/Pars: "+allJobs.get(i));
+        }*/
 
         return values;
     }
@@ -50,6 +52,8 @@ public class JobData {
 
         // load data, if not already loaded
         loadData();
+
+
 
         return allJobs;
     }
@@ -80,6 +84,10 @@ public class JobData {
                 jobs.add(row);
             }
         }
+
+        /*for (int i = 0; i < jobs.size(); i++) {
+            System.out.println("I put this in: findByColumnAndValue: "+jobs.get(i));
+        }*/
 
         return jobs;
     }
